@@ -67,12 +67,12 @@ describe('Проверка авторизации', function () {
                     cy.get('#forgotEmailButton').click(); // найти и нажать кнопку Забыли пароль
                     cy.get('#mailForgot').type('german@dolnikov.ru') // ввести верный логин
                     cy.get('#restoreEmailButton').click() // нажать кнопку отправить код
-                    cy.get('#messageHeader').contains('Успешно отправили пароль на e-mail'); 
+                    cy.get('#messageHeader').contains('Успешно отправили пароль на e-mail'); // проверяем, что м получаем сообщение об успешной отправке сообщения
                     })
 
                     it('Проверка на приведение к строчным буквам в логине', function () {
                         cy.visit('https://login.qa.studio/'); // зашли на сайт
-                        cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); // Проверяю цвет кнопки забыли пароль
+                        cy.get('#forgotEmailButton').should('have.css', 'color', 'rgb(0, 85, 152)'); // Проверяем цвет кнопки забыли пароль
                         
                      
                         cy.get('#mail').type('GerMan@Dolnikov.ru'); // ввели верный логин с заглавными буквами 
