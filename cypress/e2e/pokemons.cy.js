@@ -3,8 +3,8 @@
  describe('Покупка аватара', function () {
     it('2е2', function () {
         cy.visit('https://pokemonbattle.me/'); // зашли на сайт
-        cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN'); // ввели верный логин
-        cy.get('#password').type('USER_PASSWORD'); // ввели верный пароль
+        cy.get(':nth-child(1) > .auth__input').type('dariasha1@yandex.ru'); // ввели верный логин
+        cy.get('#password').type('1Usov-23'); // ввели верный пароль
         cy.get('.auth__button').click(); // нажали кнопку войти
         cy.get('.header__btns > [href="/shop"]').click();// нажали кнопку магазин
         cy.get('.available > button').first().click();  //кликаем по кнопке Купить у второго доступного аватара
